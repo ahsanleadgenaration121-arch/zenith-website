@@ -1,177 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Zenith Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        nav {
-            background-color: #333;
-            padding: 1rem;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        nav a:hover {
-            color: #667eea;
-        }
-        
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 3rem 0;
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #667eea;
-        }
-        
-        .hero p {
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .feature-card {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .feature-card h3 {
-            color: #667eea;
-            margin-bottom: 1rem;
-        }
-        
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZENITH HR SOLUTIONS</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      width:100%;
+      padding:20px 0;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      backdrop-filter:blur(12px);
+      background:rgba(0,0,0,0.3);
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+      color:#00c6ff;
+    }
+
+    .logo span{
+      color:#ffffff;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+    }
+
+    .nav-links a{
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    .nav-links a:hover{
+      color:#00c6ff;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:
+      linear-gradient(rgba(5,8,22,0.75),rgba(5,8,22,0.85)),
+      url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:70px;
+      line-height:1.1;
+      margin-bottom:20px;
+    }
+
+    .hero h1 span{
+      color:#00c6ff;
+    }
+
+    .hero p{
+      font-size:18px;
+      line-height:1.8;
+      color:#d6d6d6;
+      margin-bottom:35px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      border-radius:50px;
+      background:linear-gradient(135deg,#00c6ff,#0072ff);
+      color:white;
+      font-weight:600;
+      transition:0.4s;
+      box-shadow:0 10px 30px rgba(0,198,255,0.3);
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+    }
+
+    /* SERVICES */
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#bdbdbd;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#0f172a;
+      border:1px solid rgba(255,255,255,0.06);
+      padding:35px;
+      border-radius:20px;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#00c6ff;
+      box-shadow:0 20px 40px rgba(0,198,255,0.15);
+    }
+
+    .card h3{
+      margin-bottom:20px;
+      color:#00c6ff;
+    }
+
+    .card p{
+      color:#cfcfcf;
+      line-height:1.7;
+    }
+
+    /* ABOUT */
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    .about-content h2{
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .about-content p{
+      color:#d0d0d0;
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    /* CONTACT */
+
+    .contact-box{
+      background:#0f172a;
+      padding:50px;
+      border-radius:25px;
+      text-align:center;
+    }
+
+    .contact-box h2{
+      margin-bottom:20px;
+      font-size:42px;
+    }
+
+    .contact-box p{
+      margin-bottom:15px;
+      color:#cfcfcf;
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:30px 0;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:#9ca3af;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:48px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+      .section-title h2{
+        font-size:34px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Zenith Website</h1>
-        <p>Reach New Heights</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <main>
-        <section class="hero">
-            <h2>Welcome to Zenith</h2>
-            <p>Experience excellence and innovation in every aspect of your digital journey</p>
-            <a href="#" class="cta-button">Get Started</a>
-        </section>
-        
-        <section class="features">
-            <div class="feature-card">
-                <h3>🚀 Fast</h3>
-                <p>Lightning-fast performance optimized for speed and efficiency</p>
-            </div>
-            <div class="feature-card">
-                <h3>🔒 Secure</h3>
-                <p>Enterprise-grade security to protect your data and privacy</p>
-            </div>
-            <div class="feature-card">
-                <h3>📱 Responsive</h3>
-                <p>Works seamlessly across all devices and screen sizes</p>
-            </div>
-            <div class="feature-card">
-                <h3>✨ Modern</h3>
-                <p>Built with the latest technologies and best practices</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2026 Zenith Website. All rights reserved.</p>
-    </footer>
+
+  <!-- NAVBAR -->
+
+  <nav>
+    <div class="container nav-wrapper">
+      <div class="logo">ZENITH <span>HR</span></div>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Elevating <span>Possibilities</span></h1>
+
+      <p>
+        ZENITH HR Solutions provides professional manpower support,
+        BPO staffing, sales executives, recruitment services,
+        and HR outsourcing solutions for local and international companies.
+      </p>
+
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Services</h2>
+        <p>Professional Workforce & HR Solutions</p>
+      </div>
+
+      <div class="services">
+
+        <div class="card">
+          <h3>Manpower Support</h3>
+          <p>
+            Skilled workforce solutions for BPO, sales,
+            support, and operational teams.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Sales Executive Hiring</h3>
+          <p>
+            Performance-focused sales professionals
+            ready to scale your business growth.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>HRIS Solutions</h3>
+          <p>
+            HR management systems, employee tracking,
+            attendance management, and support.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>BPO Outsourcing</h3>
+          <p>
+            Customer support, call center staffing,
+            remote agents, and outsourced teams.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+    <div class="container about">
+
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="about">
+
+      <div class="about-content">
+        <h2>About ZENITH</h2>
+
+        <p>
+          ZENITH HR Solutions is a Bangladesh-based HR
+          and manpower support company helping businesses
+          scale through reliable workforce solutions.
+        </p>
+
+        <p>
+          We specialize in sales staffing, BPO operations,
+          recruitment, and outsourced workforce management
+          for both domestic and international companies.
+        </p>
+
+        <a href="#contact" class="btn">Contact Us</a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Dhaka, Bangladesh</p>
+
+        <p>📞 +8801680606681</p>
+
+        <p>
+          Let’s build professional manpower solutions together.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 ZENITH HR SOLUTIONS — Elevating Possibilities
+  </footer>
+
 </body>
 </html>
